@@ -1,0 +1,113 @@
+/******************************* Header *******************************/
+header.flex{
+    justify-content: space-between;
+    padding: 0 2.4rem;
+    margin-top: 1.2rem;
+}
+header.flex nav{
+    background-color: var(--bgHeader);
+    padding: 0.77rem 1.6rem; 
+    border-radius: 55px;
+    box-shadow: 0px 0px 15px rgb(255, 255, 255) ;
+}
+
+
+header ul.flex {
+    gap: 16px;
+}
+
+header ul li a{
+    color: var(--title); 
+    opacity: 0.8;
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+header ul li a:hover{
+    color: var(--blue); 
+    opacity: 1;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+header button{
+    font-size: 1.2rem ;
+}
+
+header button.menu{
+    display: none;
+}
+/******************************** Icon button ****************************************/
+header button.mode, header .icon-menu{
+    background-color: var(--bgHeader);
+    height: 2.4rem;
+    width: 2.4rem;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    color: var(--subtitle);
+    border: 1px solid rgba(244, 165, 96, 0.294) ;
+    transition: 0.2s;
+}
+
+header button.mode:hover, header .icon-menu:hover{
+    color: var(--title);
+    border: 1px solid rgba(244, 165, 96, 96) ;
+}
+
+header .icon-close{
+    font-size: 1.5rem;
+    color: var(--subtitle);
+    transition: 0.3s;
+}
+header .icon-close:hover{
+    font-size: 1.7rem;
+    color: crimson;
+    rotate: 180deg;
+}
+/******************************** moadal == pop up *********************************************/
+header .fixed{
+    position: fixed;
+    inset: 0;/* top: 0 ;bottom: 0;right: 0;left: 0; */
+    z-index: 4;
+    background-color: rgba(40, 40, 48, 0.91);
+}
+
+@keyframes move {
+    0%   {scale : 0 ;}
+    60%  {scale :1.1;}
+    100% {scale : 1 ;}
+    
+}
+header .fixed ul.modal{
+    animation: move 0.7s 1 ;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2rem;
+    border-radius: 1rem ;
+    padding: 1rem 2rem;
+    background-color: var(--secondary);
+}
+
+header .fixed ul.modal li{
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.77rem; 
+    padding-top: 0.5rem;
+}
+header .fixed ul.modal li:last-child{
+  border: none;
+}
+header .fixed ul.modal li a{
+    font-size: 1rem ;
+}
+header .fixed ul.modal li:first-child{
+    text-align: right;
+    border: none;
+    padding-bottom: 0rem; 
+    padding-top: 0.2rem;
+  }
+/******************************* Responsive Deseign:(Media Query) *******************************/
+@media(max-width: 700px){
+    header.flex nav{ display: none; }
+
+    header button.menu{ display: block; }
+}
