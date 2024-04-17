@@ -8,7 +8,7 @@ header.flex nav{
     background-color: var(--bgHeader);
     padding: 0.77rem 1.6rem; 
     border-radius: 55px;
-    box-shadow: 0px 0px 15px rgb(255, 255, 255) ;
+    box-shadow: 0px 0px 15px aqua ;
 }
 
 
@@ -44,13 +44,13 @@ header button.mode, header .icon-menu{
     text-align: center;
     border-radius: 50%;
     color: var(--subtitle);
-    border: 1px solid rgba(244, 165, 96, 0.294) ;
+    border: 1px solid aqua ;
     transition: 0.2s;
 }
 
 header button.mode:hover, header .icon-menu:hover{
     color: var(--title);
-    border: 1px solid rgba(244, 165, 96, 96) ;
+    border: 1px solid aqua ;
 }
 
 header .icon-close{
@@ -79,7 +79,7 @@ header .fixed{
 }
 header .fixed ul.modal{
     animation: move 0.7s 1 ;
-    width: 80%;
+    width: 75%;
     margin-right: auto;
     margin-left: auto;
     margin-top: 2rem;
@@ -102,8 +102,9 @@ header .fixed ul.modal li a{
 header .fixed ul.modal li:first-child{
     text-align: right;
     border: none;
-    padding-bottom: 0rem; 
+    padding-bottom: 0; 
     padding-top: 0.2rem;
+    margin-bottom: -1rem;
   }
 /******************************* Responsive Deseign:(Media Query) *******************************/
 @media(max-width: 700px){
