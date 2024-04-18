@@ -40,7 +40,18 @@ html{
 }
 
 .light{
-  --primary : #fff; 
+  --primary : rgb(250,250,250); 
+  --secondary : rgb(255, 255, 255);
+  --border : rgba(202, 202, 202, 0.518);
+
+  --title: rgb(39, 39, 42);
+  --subtitle: rgb(82, 82, 91);
+
+  --bgHeader: rgb(253, 253, 253);
+  --blue : rgb(93,188,252);
+
+  --icon-hover: #333;
+
 }
 
 body{
@@ -88,6 +99,11 @@ button:hover{
 }
 button:active{
   scale:0.95;
+}
+
+button:disabled{
+  opacity: 0.4;
+  cursor: not-allowed;
 }
 
 @media (max-width :1000px){
@@ -140,7 +156,9 @@ button:active{
   bottom: 2rem;
   right: 3%;
   text-align: center;
-}
+  border: rgba(255, 255, 255, 0.2);
+  font-size:1.25rem;
+ }
 
 .scroll2top:hover{
   background-color: rgb(25, 118, 210);
@@ -159,6 +177,7 @@ button:active{
     opacity: 0.6;
     width: 2.2rem;
     height: 2.2rem;
+    font-size:1rem;
   }
 
 }

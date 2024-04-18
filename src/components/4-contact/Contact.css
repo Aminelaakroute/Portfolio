@@ -35,15 +35,30 @@ section.contact-us .flex #email , section.contact-us .flex #message{
     font-size: 1.1rem;
 }
 
-section.contact-us .flex #email:focus ,
-section.contact-us .flex #message:focus{
-    border: 1px solid aqua;
+.light section.contact-us .flex #email , section.contact-us .flex #message{
+    background-color: rgba(255, 255, 255, 0.162);
+    border: 1px solid rgba(128 , 128, 128, 0.451);
+    
+    color: #232324;
 }
 
+
+
+section.contact-us .flex #email:focus ,
+section.contact-us .flex #message:focus,
 section.contact-us .flex #email:hover ,
 section.contact-us .flex #message:hover{
     border: 1px solid aqua;
 }
+
+
+.light section.contact-us .flex #email:focus ,
+.light section.contact-us .flex #message:focus,
+.light section.contact-us .flex #email:hover ,
+.light section.contact-us .flex #message:hover{
+    border: 1px solid rgb(82, 82, 91);
+}
+
 
 section.contact-us .flex #message{
     min-height: 9rem;
@@ -66,7 +81,13 @@ section.contact-us .flex .submit:hover{
     scale: 0.97;
 }
 
+section.contact-us .resp{
+    color: var(--subtitle);
+}
 
+.light section.contact-us .resp{
+    color: black;
+}
 
 /* responsive design */
 @media (max-width :600px){

@@ -11,6 +11,9 @@ header.flex nav{
     box-shadow: 0px 0px 15px aqua ;
 }
 
+.light header.flex nav{
+    box-shadow: 0px 0px 15px rgb(28, 39, 39) ;
+}
 
 header ul.flex {
     gap: 16px;
@@ -48,9 +51,20 @@ header button.mode, header .icon-menu{
     transition: 0.2s;
 }
 
+.light header button.mode, .light header .icon-menu{
+    border: 1px solid rgb(28, 39, 39) ;
+    color: rgb(28, 39, 39);
+    box-shadow: 0px 0px 12px rgb(28, 39, 39) ;
+}
+
 header button.mode:hover, header .icon-menu:hover{
     color: var(--title);
     border: 1px solid aqua ;
+}
+
+.light header button.mode:hover, .light header .icon-menu:hover{
+    border: 1px solid rgb(245, 214, 129) ; 
+    color: orange;
 }
 
 header .icon-close{

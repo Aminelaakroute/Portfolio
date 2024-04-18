@@ -37,9 +37,14 @@ main.flex .left-section button.active{
     border: 1px solid aqua ;
 
 }
+
+.light main.flex .left-section .active{
+    border: 1px solid #0000 ;
+
+}
 /* right section => project card*/
 main.flex section.right-section.flex{
-    /* flex-grow: 1; */
+    flex-grow: 1;
     justify-content: center;
     flex-wrap: wrap;
     column-gap: 16px;
@@ -50,9 +55,22 @@ main.flex .card{
     border-radius: 5px;
     transition: 0.3s;
     background-image: linear-gradient(
-        rgb(190, 65, 153),
-        rgb(240, 238, 239));
+        rgb(0, 0, 0),
+        rgb(52, 52, 56));
+    box-shadow: -2px 1px 1px rgba(0, 0, 0, 0.3), 2px 1px 1px rgba(0, 0, 0, 0.15);
 }
+
+
+.light main.flex .card , .light main.flex .card:hover{
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    background-image: linear-gradient(
+        rgb(0, 0, 0),
+        rgb(255, 255, 255));
+}
+
+
 main.flex .card:hover{
     border: 1px solid var(--blue);
     rotate: 1deg;
@@ -67,6 +85,7 @@ main.flex .card .box {
 }
 main.flex .card .box .title{
     color: var(--title);
+    text-transform: capitalize;
 }
 main.flex .card .box .subtitle{
     color: var(--subtitle);
@@ -112,6 +131,4 @@ main.flex .card .link{
         padding: 0.8rem 0rem ;
         font-size: 0.9rem;
     }
-    
-  
   }
