@@ -20,7 +20,7 @@ const Hero = () => {
        </p>
 
        <div className="all-icons flex ">
-        <div className="icon icon-facebook2" ></div>
+        <div className="icon icon-facebook2"></div>
         <div className="icon icon-instagram"></div>
         <div className="icon icon-github"></div>
         <div className="icon icon-linkedin1"></div>
