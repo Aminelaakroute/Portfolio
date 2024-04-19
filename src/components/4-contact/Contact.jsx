@@ -1,7 +1,9 @@
 import React from 'react'
 import './Contact.css'
 import { useForm, ValidationError } from '@formspree/react';
-
+import Lottie from "lottie-react";
+import DoneAnnimation from "../../assets/animations/Smooth Success Check Animation.json";
+import Mail from "../../assets/animations/mail.json";
 
 
 const Contact = () => {
@@ -18,11 +20,11 @@ const Contact = () => {
       </p>
 
 
-      <div className="flex">
+      <div style={{justifyContent : "space-between"}} className="flex">
         <form onSubmit={handleSubmit}>
           <div className='flex'>
             <label htmlFor="email">Email Address:</label>
-            <input autoComplete='off' required type="email" name="" id="email" />
+            <input autoComplete='off' required type="email" name="email" id="email" />
             <ValidationError
               prefix="Email"
               field="email"
@@ -32,7 +34,7 @@ const Contact = () => {
 
           <div className='flex' style={{ marginTop: "24px" }}>
             <label htmlFor="message">Your Message:</label>
-            <textarea required name="text" id="message" ></textarea>
+            <textarea required name="message" id="message" ></textarea>
             <ValidationError
               prefix="Message"
               field="message"
@@ -48,11 +50,18 @@ const Contact = () => {
           </button>
           {
                state.succeeded  && (
-               <p className='resp' style={{fontSize: "16px", marginTop:"1.7rem"}} >Your message has been sent successfully 👌</p>
-                              )
+                <p className='flex resp' style={{fontSize: "16px", marginTop:"1.7rem"}} >
+                  <Lottie loop={false} style={{height:35}} animationData={DoneAnnimation}/>
+                  Your message has been sent successfully 👌
+                </p>
+                
+              )
           }
         </form>
-        <div className="animation border">animation</div>
+
+        <div className="animation">
+          <Lottie className='Contact-Anim' style={{ height : 350}} animationData={Mail}/>
+        </div>
       </div>
 
     </section>

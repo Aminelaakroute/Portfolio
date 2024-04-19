@@ -35,7 +35,7 @@ section.contact-us .flex #email , section.contact-us .flex #message{
     font-size: 1.1rem;
 }
 
-.light section.contact-us .flex #email , section.contact-us .flex #message{
+.light section.contact-us .flex #email , .light section.contact-us .flex #message{
     background-color: rgba(255, 255, 255, 0.162);
     border: 1px solid rgba(128 , 128, 128, 0.451);
     
@@ -90,6 +90,12 @@ section.contact-us .resp{
 }
 
 /* responsive design */
+
+@media (max-width :1120px){
+    section.contact-us .Contact-Anim{
+        display: none;
+    }
+}
 @media (max-width :600px){
     section.contact-us .flex form{
         display: flex;

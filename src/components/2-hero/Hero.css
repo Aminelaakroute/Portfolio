@@ -8,6 +8,7 @@ section.hero{
 section.hero .parent-avatar.flex{
     align-items: end;
     gap: 0.6rem ;
+    min-height: 88px;
 }
 section.hero .left-section{
     flex-grow: 1;
@@ -15,7 +16,7 @@ section.hero .left-section{
 section.hero .icon-verified{
     color: var(--blue);
     font-size: 1.1rem;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.3rem; 
 }
 section.hero .avatar{
     width: 88px;
@@ -63,4 +64,16 @@ section.hero .all-icons .icon:hover{
 
 /********************** right section **********************/
 
+
+section.hero .animation{
+    width: 100%;
+    translate: 80px 55px ;
+}
+
+
+@media (max-width :1120px){
+    section.hero .animation{
+        display: none;
+    }
+}
 
