@@ -16,7 +16,7 @@ const Contact = () => {
         Contact Us
       </h1>
       <p className='subtitle'>
-      Get in touch for inquiries, collaborations, or just to say hello! We're here to assist and eagerly await your message. <br />Thank you for considering us, and we're excited to hear from you soon!
+      Feel free to reach out for any inquiries, collaborations, or simply to say hello! I'm here to assist and eagerly await your message. Thank you for considering me, and I'm excited to hear from you soon!
       </p>
 
 
