@@ -42,12 +42,12 @@ const Header = () => {
         setTheme(localStorage.getItem("currentMode"))
       }
       } className='mode flex'>
-        {Theme ==="dark" ? (
-                  <span className='icon-moon-o' />
-                ) : (
-                  <span className='icon-sun' />
-                )
-         }
+        {Theme === "dark" ? (
+          <span className='icon-moon-o' />
+        ) : (
+          <span className='icon-sun' />
+        )
+        }
       </button>
       {showModal && (
         <div className="fixed">
