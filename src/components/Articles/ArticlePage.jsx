@@ -1,31 +1,51 @@
-import { motion } from 'framer-motion';
-import './ArticlePage.css';
-import { MyArticles } from './MyArticles';
 import { useState } from 'react';
+import { Card, CardMedia, CardContent, Typography } from '@mui/material';
+import { MyArticles } from './MyArticles';
 
 const ArticlePage = () => {
-  const [Arr, setArr] = useState(MyArticles);
+  const [articles, setArticles] = useState(MyArticles);
+
   return (
-    
-    <section className="flex">
-      {Arr.map((item) => {
-        return (
-          <motion.article 
-          layout 
-          initial={{transform : "scale(0)"}}
-          animate={{transform : "scale(1)"}}
-          transition={{ type : "spring", stiffness : 260, damping : 20}}
+    <section style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center', padding: '16px' }}>
+      {articles.map((item) => (
+        <Card
           key={item.id}
-          className='card'>
-          <img width={606} height={368} src={item.imgPath} alt={item.title} />
-          <div style = {{width : "266px"}} className="box">
-            <h2>{item.ArticleTitle}</h2>
-            <p>{item.category}</p>
-            <p>{item.ArticleLink}</p>
-          </div>
-          </motion.article>)})}
+          sx={{
+            width: 606, // Largeur fixe pour correspondre à l'image
+            boxShadow: 3,
+            transition: 'transform 0.3s ease-in-out',
+            '&:hover': { transform: 'scale(1.05)' },
+          }}
+        >
+          <CardMedia
+            component="img"
+            image={item.imgPath}
+            alt={item.title}
+            sx={{
+              width: 606,
+              height: 368,
+              objectFit: 'cover', // Assure que l'image remplit bien la zone
+            }}
+          />
+          <CardContent>
+            <Typography variant="h6" component="div" sx={{ fontWeight: 'bold', marginBottom: 1 }}>
+              {item.ArticleTitle}
+            </Typography>
+            <Typography variant="body2" sx={{ color: 'text.secondary', marginBottom: 1 }}>
+              Category: {item.category}
+            </Typography>
+            <Typography
+              variant="body2"
+              sx={{ color: 'primary.main', textDecoration: 'underline', cursor: 'pointer' }}
+              onClick={() => window.open(item.ArticleLink, '_blank')}
+            >
+              Read more
+            </Typography>
+          </CardContent>
+        </Card>
+      ))}
     </section>
-  )}
+  );
+};
 
 export default ArticlePage;
-
