@@ -1,4 +1,3 @@
-import React from 'react'
 import './Hero.css'
 import Lottie from 'lottie-react';
 import Laptop1 from "../../assets/animations/Computer Window Animation.json";

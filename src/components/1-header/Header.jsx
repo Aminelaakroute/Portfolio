@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './Header.css'
 
 const Header = () => {
@@ -26,8 +26,8 @@ const Header = () => {
       <div />
       <nav>
         <ul className='flex'>
-          <li><a href="">About</a></li>
-          <li><a href="">Articles</a></li>
+          <li><a href="">Abouts</a></li>
+          <li><a href="/Articles">Articles</a></li>
           <li><a href="">Projects</a></li>
           <li><a href="">Studies</a></li>
           <li><a href="">Contact</a></li>
@@ -60,7 +60,7 @@ const Header = () => {
                 } />
               </li>
               <li><a href="">About</a></li>
-              <li><a href="">Articles</a></li>
+              <li><a href="/Articles">Articles</a></li>
               <li><a href="">Projects</a></li>
               <li><a href="">Speaking</a></li>
               <li><a href="">Contact</a></li>

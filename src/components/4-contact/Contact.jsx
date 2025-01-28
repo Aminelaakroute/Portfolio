@@ -1,4 +1,3 @@
-import React from 'react'
 import './Contact.css'
 import { useForm, ValidationError } from '@formspree/react';
 import Lottie from "lottie-react";
@@ -17,8 +16,8 @@ const Contact = () => {
       </h1>
       <p className='subtitle'>
       Feel free to reach out for any inquiries, collaborations, or simply to say hello! 
-      I'm here to assist and eagerly await your message. Thank you for considering me, 
-      and I'm excited to hear from you soon!
+      I&apos;m here to assist and eagerly await your message. Thank you for considering me, 
+      and I&apos;m excited to hear from you soon!
       </p>
 
 

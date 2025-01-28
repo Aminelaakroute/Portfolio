@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './Main.css'
 import { MyProject } from './MyProject'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -75,7 +75,7 @@ const Main = () => {
                 <h1 className='title'>{item.projectTitle}</h1>
 
                 <p className='subtitle'>
-                  If you want to see more information about this project, click on "More" If you're interested in the source code, click on the link provided.
+                  If you want to see more information about this project, click on &quot;More&quot; If you&apos;re interested in the source code, click on the link provided.
                 </p>
 
                 <div className='icons flex'>

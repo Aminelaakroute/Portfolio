@@ -56,7 +56,7 @@ section.hero .all-icons{
     
 }
 section.hero .all-icons .icon:hover{
-    font-size: 2.4rem;
+    font-size: 2rem;
     transition: 0.3s;
     cursor: pointer;
     color: var(--icon-hover);
